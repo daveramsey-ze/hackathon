@@ -1,0 +1,37 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-chart">
+                <div class="card-header text-center">
+                    <h2 class="card-title">Which branch of the military?</h2>
+                </div>
+                <div class="card-body text-center">
+                    <button class="btn btn-primary" id="army-button">Army</button>
+                    <button class="btn btn-secondary" id="navy-button">Navy</button>
+                    <button class="btn btn-success" id="airforce-button">Airforce</button>
+                    <button class="btn btn-danger" id="marines-button">Marines</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block extrajs %}
+<script>
+    document.getElementById('army-button').addEventListener('click', function() {
+        alert('You selected Army');
+    });
+    document.getElementById('navy-button').addEventListener('click', function() {
+        alert('You selected Navy');
+    });
+    document.getElementById('airforce-button').addEventListener('click', function() {
+        alert('You selected Airforce');
+    });
+    document.getElementById('marines-button').addEventListener('click', function() {
+        alert('You selected Marines');
+    });
+</script>
+{% endblock extrajs %}

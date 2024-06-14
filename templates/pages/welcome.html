@@ -1,0 +1,29 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-chart">
+                <div class="card-header text-center">
+                    <h2 class="card-title">Are you a vet?</h2>
+                </div>
+                <div class="card-body text-center">
+                    <button class="btn btn-primary" id="yes-button">Yes</button>
+                    <button class="btn btn-secondary" id="no-button">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block extrajs %}
+<script>
+    document.getElementById('yes-button').addEventListener('click', function() {
+        alert('You selected Yes');
+    });
+    document.getElementById('no-button').addEventListener('click', function() {
+        alert('You selected No');
+    });
+</script>
+{% endblock extrajs %}

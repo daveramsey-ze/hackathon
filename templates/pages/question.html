@@ -1,0 +1,35 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-chart">
+                <div class="card-header text-center">
+                    <h2 class="card-title">{{ question.text }}</h2>
+                </div>
+                <div class="card-body text-center">
+                    {% if options %}
+                        {% for option in options %}
+                            {% if question.next_question %}
+                                <a href="{% url 'question' question.next_question.id %}" class="btn btn-primary">{{ option.text }}</a>
+                            {% else %}
+                                <button class="btn btn-primary" disabled>{{ option.text }}</button>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        <p>No options available.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block extrajs %}
+<script>
+    function handleOptionClick(optionText) {
+        alert('You selected ' + optionText);
+    }
+</script>
+{% endblock extrajs %}
