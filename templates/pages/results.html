@@ -31,15 +31,11 @@
         <div class="col-12">
             <div class="card card-chart">
                 <div class="card-header text-center">
-                    <h2 class="card-title">{{ question.text }}</h2>
+                    <h2 class="card-title">Thank you for helping someone.</h2>
                 </div>
                 <div class="card-body text-center">
-                    <form method="post">
-                        {% csrf_token %}
-                        {% for option in options %}
-                            <button class="btn btn-primary" name="answer" value="{{ option.text }}" type="submit">{{ option.text }}</button>
-                        {% endfor %}
-                    </form>
+                    <H1>The calculated risk score is: {{ risk_score }} / 12</H1>
+                    
                 </div>
             </div>
         </div>
