@@ -6,11 +6,11 @@
         <div class="col-12">
             <div class="card card-chart">
                 <div class="card-header text-center">
-                    <h2 class="card-title">Are you a vet?</h2>
+                    <h2 class="card-title">Welcome to VeteranCare365</h2>
                 </div>
+                <h3 class="card-title">This assessment is designed to assist individuals who may be experiencing a crisis, helping them navigate through a difficult period. Ready for the Assessment?</h3>
                 <div class="card-body text-center">
                     <button class="btn btn-primary" id="yes-button">Yes</button>
-                    <button class="btn btn-secondary" id="no-button">No</button>
                 </div>
             </div>
         </div>
@@ -20,10 +20,7 @@
 {% block extrajs %}
 <script>
     document.getElementById('yes-button').addEventListener('click', function() {
-        alert('You selected Yes');
-    });
-    document.getElementById('no-button').addEventListener('click', function() {
-        alert('You selected No');
+        window.location.href = '/question/1/';
     });
 </script>
 {% endblock extrajs %}
