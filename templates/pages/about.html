@@ -1,0 +1,54 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-chart">
+                <div class="card-header text-center">
+                    <h2 class="card-title">Welcome to VeteranCare365</h2>
+                </div>
+                <div class="card-body text-center">
+                <h3 class="card-title">This assessment is designed to assist individuals who may be experiencing a crisis, helping them navigate through a difficult period. Ready for the Assessment?</h3>
+                <p>Welcome to VeteranCare365: Your Comprehensive Support Hub</p>
+
+<p>At VeteranCare365, we recognize the immense sacrifice and dedication of our veterans. Transitioning to civilian life can present unique challenges, and we're here to ensure that every veteran receives the care and support they deserve.</p>
+
+<p>Our assessment tool is tailored specifically to address the well-being of veterans. By answering a series of questions, you'll receive a risk score ranging from 0 to 12, with 12 indicating the highest level of concern. Simply mark "yes" for any areas where you or the veteran you're supporting may need additional assistance.</p>
+
+<h4>How It Works:</h4>
+<p>Assessment: Take the assessment to evaluate various aspects of well-being specific to veterans. Each "yes" response triggers personalized information and resources designed to meet the unique needs of our veteran community.</p>
+
+<p>Alert System: In case of immediate need, our alert system enables you to notify a designated caregiver or support network. They can provide timely assistance or guide you through the assessment process for personalized care.</p>
+
+<p>Next Steps and Resources: Whenever you mark "yes," we provide detailed guidance on next steps, local resources, and effective strategies for addressing the identified concerns. From mental health support to financial assistance, we're here to help you navigate every aspect of veteran care.</p>
+
+<h4>Our Commitment:</h4>
+<p>At VeteranCare365, we honor and respect the privacy of our veterans. All information shared during the assessment process is kept confidential and secure. Our mission is to empower veterans and their support networks with the tools and resources necessary for a successful transition and a fulfilling life beyond service.</p>
+
+<h4>Get Started Today:</h4>
+<p>Take the first step towards comprehensive veteran care by starting the assessment now. Gain valuable insights and access to resources tailored specifically to the needs of our veterans.</p>
+
+<p>Thank you for entrusting VeteranCare365 with your well-being. We're dedicated to serving those who have served our nation.</p>                
+                
+                
+                <div class="card-body text-center">
+                    <button class="btn btn-primary" id="yes-button">Yes</button>
+                </div>
+            </div>
+        </div>
+{#    </div>#}
+
+
+    
+
+
+</div>
+{% endblock content %}
+{% block extrajs %}
+<script>
+    document.getElementById('yes-button').addEventListener('click', function() {
+        window.location.href = '/question/1/';
+    });
+</script>
+{% endblock extrajs %}

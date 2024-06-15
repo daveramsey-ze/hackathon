@@ -9,6 +9,10 @@ def welcome(request):
 
     # Page from the theme
     return render(request, 'pages/welcome.html')
+def about(request):
+
+    # Page from the theme
+    return render(request, 'pages/about.html')
 
 
 def question_view(request, question_id):
